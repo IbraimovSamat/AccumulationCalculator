@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Calculator</title>
+</head>
+<body>
+
+    <div class="section">
+        <div class="container">
+            <h1>Калькулятор Доходов/Расходов</h1>
+            <div class="menuTransaction d-flex justify-content-space-around">
+                <div class="inputs-wrapper d-flex justify-content-space-around">
+                    <div class="inputs__income d">
+                        <h3>Доход за месяц</h3>
+                        <input type="number" id="inputIncome" placeholder="зарплата" >
+                        <input type="number" id="inputFreelance" placeholder="фриланс">
+                        <input type="number" id="additionalIncome" placeholder="доп доходы">
+                        <input id="additionalIncomeSecond" placeholder="доп доходы">
+                    </div>
+                    <div class="inputs__costs">
+                        <h3>Расходы</h3>
+                        <input id="flatSpend" placeholder="квартира" >
+                        <input id="petrolSpend" placeholder="бензин">
+                        <input id="hacsSpend" placeholder="жкх">
+                        <input id="foodSpend" placeholder="еда">
+                    </div>
+                </div>
+                <div class="result d-flex flex-direction-column justify-content-space-around">
+                    <div class="incomeInMonth">
+                        <h3>Доступно в месяц(без копилки):</h3>
+                        <p class="weight-p totalMonth">0</p>
+                    </div>
+                    <div class="incomeInDay">
+                        <h3>Доступно в день:</h3>
+                        <p class="weight-p totalDay">0</p>
+                    </div>
+                    <div class="incomeInYear">
+                        <h3>Накопим за год:</h3>
+                        <p class="weight-p totalYear">0</p>
+                    </div>
+                </div>
+            </div>
+            <div class="piggyBank">
+                <div class="saveMoney">
+                    <p>Копилка(сколько откладываем?)</p>
+                    <input type="range" id="money-box-range" max="100" min="0" value="0">
+                    <p><span id="total-precents">0</span>%</p>
+                </div>
+                <div class="resultSave d-flex justify-content-space-around">
+                    <div class="moneyBox">Копим: <span id="accumulation">0</span></div>
+                    <div class="spend">Тратим: <span id="spend">0</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
